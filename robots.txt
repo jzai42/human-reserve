@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jzai42.github.io/human-reserve/sitemap.xml
