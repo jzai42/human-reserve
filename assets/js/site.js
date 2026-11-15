@@ -35,7 +35,7 @@
     const source=panelButtons[current].querySelector('img');
     if (!source || !image) return;
     image.src=source.src;image.alt=source.alt;
-    if(label)label.textContent=`CASE 001 / PANEL ${current+1} OF ${panelButtons.length}`;
+    if(label)label.textContent=`CASE ${reader.dataset.caseNumber || "001"} / PANEL ${current+1} OF ${panelButtons.length}`;
   }
   panelButtons.forEach((b,i)=>b.addEventListener('click',()=>{renderPanel(i);dialog?.showModal();}));
   dialog?.querySelector('[data-lb-close]')?.addEventListener('click',()=>dialog.close());
