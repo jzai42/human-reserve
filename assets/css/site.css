@@ -10,7 +10,7 @@
 @media(max-width:760px){.panel-grid.five-panels > button:last-child{grid-column:auto}}
 
 /* Episode navigation: always list published comics in episode-number order. */
-.archive-episode-nav{display:grid;grid-template-columns:160px repeat(4,minmax(0,1fr));gap:12px;align-items:stretch;margin:0 0 34px}
+.archive-episode-nav{display:grid;grid-template-columns:160px repeat(6,minmax(0,1fr));gap:12px;align-items:stretch;margin:0 0 34px}
 .archive-episode-caption{display:flex;flex-direction:column;justify-content:center;font:800 12px 'DM Sans',sans-serif;letter-spacing:.11em;color:var(--ink);padding-right:4px}
 .archive-episode-caption small{display:block;color:#647071;font:700 11px 'DM Sans',sans-serif;margin-top:7px;letter-spacing:.1em}
 .episode-shortcut{display:flex;flex-direction:column;justify-content:center;gap:3px;padding:12px 14px;min-height:67px;background:#f7eee0;border:2px solid #283b3e;box-shadow:3px 3px 0 #baa997;transition:background .15s,transform .15s,box-shadow .15s}
