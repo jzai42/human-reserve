@@ -8,3 +8,24 @@
 .panel-grid.five-panels > button:last-child{grid-column:1/-1}
 .reader.stacked .panel-grid.five-panels > button:last-child{grid-column:auto}
 @media(max-width:760px){.panel-grid.five-panels > button:last-child{grid-column:auto}}
+
+/* Episode navigation: always list published comics in episode-number order. */
+.archive-episode-nav{display:grid;grid-template-columns:160px repeat(4,minmax(0,1fr));gap:12px;align-items:stretch;margin:0 0 34px}
+.archive-episode-caption{display:flex;flex-direction:column;justify-content:center;font:800 12px 'DM Sans',sans-serif;letter-spacing:.11em;color:var(--ink);padding-right:4px}
+.archive-episode-caption small{display:block;color:#647071;font:700 11px 'DM Sans',sans-serif;margin-top:7px;letter-spacing:.1em}
+.episode-shortcut{display:flex;flex-direction:column;justify-content:center;gap:3px;padding:12px 14px;min-height:67px;background:#f7eee0;border:2px solid #283b3e;box-shadow:3px 3px 0 #baa997;transition:background .15s,transform .15s,box-shadow .15s}
+.episode-shortcut:hover,.episode-shortcut:focus-visible{background:#e6d3b7;transform:translate(1px,1px);box-shadow:2px 2px 0 #baa997}
+.episode-shortcut strong{font:900 22px/1 'Barlow Condensed',Impact,sans-serif;color:#ca4b3c}
+.episode-shortcut span{font:800 11px/1.25 'DM Sans',Arial,sans-serif;letter-spacing:.04em}
+.page-hero h1.archive-title{font-size:clamp(45px,7.5vw,105px)}
+/* Full-page reader expands to the article width. Image retains its native proportions; case-file details move below it. */
+.comic-layout.full-page-layout{grid-template-columns:minmax(0,1fr);gap:28px}
+.comic-layout.full-page-layout .reader.full .full-comic{max-width:1120px;width:100%;margin:0 auto}
+.comic-layout.full-page-layout .reader.full .full-comic img{display:block;width:100%;height:auto;max-height:none;aspect-ratio:auto;object-fit:contain}
+.comic-layout.full-page-layout .reader-sidebar{position:static;max-width:1120px;width:100%;margin:0 auto}
+.reader-episode-jump{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0 16px}
+.reader-episode-jump a{border:2px solid #314448;background:#f6e9d6;padding:7px 10px;font:800 13px 'DM Sans',Arial,sans-serif}
+.reader-episode-jump a:hover,.reader-episode-jump a:focus-visible{background:#dec5a5}
+.reader-episode-jump a[aria-current="page"]{background:#24383a;color:white}
+@media(max-width:1020px){.archive-episode-nav{grid-template-columns:repeat(2,minmax(0,1fr))}.archive-episode-caption{grid-column:1/-1}}
+@media(max-width:540px){.archive-episode-nav{gap:9px}.episode-shortcut{padding:10px;min-height:65px}.page-hero h1.archive-title{font-size:clamp(39px,10.4vw,60px)}}

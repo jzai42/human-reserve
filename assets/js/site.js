@@ -20,6 +20,8 @@
   const setMode = mode => {
     reader.classList.remove('panels','stacked','full');
     reader.classList.add(mode);choice=mode;
+    const comicLayout = reader.closest('.comic-layout');
+    if(comicLayout) comicLayout.classList.toggle('full-page-layout', mode === 'full');
     modes.forEach(b => b.setAttribute('aria-pressed',String(b.dataset.mode===mode)));
     try { sessionStorage.setItem(modeKey,mode); } catch(_){ }
   };
